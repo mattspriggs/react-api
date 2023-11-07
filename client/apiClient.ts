@@ -9,6 +9,7 @@ export async function getWidgets(): Promise<Widget[]> {
   return widgets.body
 }
 
-export async function createWidget(): Promise<Widget[]> {
-  console.log('create widget')
+export async function createWidget(form:NewWidget){
+  const response = await request.post(widgetUrl).send(form)
+  return response.body
 }
