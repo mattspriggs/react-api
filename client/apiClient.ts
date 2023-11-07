@@ -8,3 +8,7 @@ export async function getWidgets(): Promise<Widget[]> {
   const widgets = await request.get(widgetUrl)
   return widgets.body
 }
+
+export async function createWidget(): Promise<Widget[]> {
+  console.log('create widget')
+}
